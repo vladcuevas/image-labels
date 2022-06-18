@@ -21,8 +21,11 @@ def detect_labels(path):
     labels = response.label_annotations
     print('Labels:')
 
+    keywords = []
     for label in labels:
-        print(label.description)
+        keywords.append(label.description)
+
+    print(keywords)
 
     if response.error.message:
         raise Exception(
@@ -33,3 +36,5 @@ def detect_labels(path):
 
 # The name of the image file to annotate
 file_name = os.path.abspath('resources/wakeupcat.jpg')
+
+detect_labels(file_name)
