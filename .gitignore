@@ -1,5 +1,6 @@
 google_private_keys/
 resources/
+resources2/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
